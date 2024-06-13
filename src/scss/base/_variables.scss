@@ -1,0 +1,35 @@
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-function-notation */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --content-width: 1200px;
+  --container-offset: 16px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // font-family
+  --font-family-primary: "Poppins", sans-serif;
+  --font-family-secondary: "Bebas Neue", sans-serif;
+
+  // font-weight
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  // color
+  --color-white: #ffffff;
+  --color-white-20: #FFFFFF33;
+
+  --color-black: #000000;
+  --color-black-70: #000000B2;
+  --color-black-50: #00000080;
+
+  --color-cream-400: #FFF0E7;
+  --color-red-400: #DC3B3B;
+  --color-red-700: #5D2020;
+  --color-red-800: #2C0909;
+
+  //  radius
+  --radius-full: 50%;
+}
