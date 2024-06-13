@@ -1,0 +1,82 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.info {
+  &__box {
+    @include flex-h-center;
+    align-items: stretch;
+    max-width: 1440px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  &__image,
+  &__content {
+    max-width: 50%;
+    width: 100%;
+  }
+
+  &__content {
+    padding: clamp(32px, 5.4vw, 77px) clamp(32px, 8.8vw, 124px) clamp(32px, 5vw, 70px);
+
+    h3 {
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      width: 100%;
+    }
+
+    &--accent {
+      color: var(--color-white);
+      background-color: var(--color-red-800);
+    }
+
+    &--bottomed {
+      position: relative;
+      top: clamp(16px, 2.2vw, 32px);
+    }
+
+    &--btn {
+      .info__texts {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  @include media(desktop) {
+    &__content {
+      padding-inline: 32px;
+    }
+  }
+
+  @include media(tablet) {
+    &__box {
+      flex-direction: column;
+    }
+
+    &__image,
+    &__content {
+      max-width: 100%;
+    }
+
+    &__content {
+      .btn {
+        width: fit-content;
+      }
+
+      &--bottomed {
+        top: 0;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    &__content {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

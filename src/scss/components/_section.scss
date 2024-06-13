@@ -17,4 +17,15 @@
       margin-bottom: clamp(32px, 5.4vw, 76px);
     }
   }
+
+  &--about {
+    .section__nav {
+      margin-bottom: clamp(32px, 6vw, 84px);
+    }
+  }
+
+  &--creamy {
+    color: var(--color-red-800);
+    background-color: var(--color-cream-400);
+  }
 }
