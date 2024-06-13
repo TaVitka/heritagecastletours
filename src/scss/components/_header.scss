@@ -1,0 +1,26 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: clamp(12px, 2vw, 26px) 0;
+  width: 100%;
+  background-color: transparent;
+  transition-property: transform, padding, background-color;
+  transition-duration: 0.15s;
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  &.scroll,
+  &.hide {
+    background-color: var(--color-red-800);
+  }
+
+  @include media(tablet) {
+    background-color: var(--color-red-800);
+  }
+}

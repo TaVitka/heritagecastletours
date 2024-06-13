@@ -4,8 +4,10 @@
 
 :root {
   --content-width: 1200px;
+  --content-large: 1312px;
   --container-offset: 16px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-large: calc(var(--content-large) + (var(--container-offset) * 2));
 
   // font-family
   --font-family-primary: "Poppins", sans-serif;
