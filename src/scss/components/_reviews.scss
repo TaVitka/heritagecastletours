@@ -1,0 +1,52 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.reviews {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 30px;
+  }
+
+  &__item {
+    @include flex-all-sb;
+    gap: clamp(10px, 2.8vw, 40px);
+    padding: 30px clamp(10px, 2.8vw, 40px);
+    color: var(--color-red-700);
+    background-color: var(--color-cream-400);
+  }
+
+  &__avatar {
+    max-width: 120px;
+    width: 100%;
+    text-align: center;
+
+    img {
+      aspect-ratio: 1/1;
+      border-radius: var(--radius-full);
+      margin-bottom: 16px;
+    }
+  }
+
+  &__content {
+    font-size: 16px;
+  }
+
+  @include media(tablet) {
+    &__items {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+    }
+  }
+
+  @include media(mobile-s) {
+    &__item {
+      flex-direction: column;
+    }
+
+    &__content {
+      text-align: center;
+    }
+  }
+}

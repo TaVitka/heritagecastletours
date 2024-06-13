@@ -5,6 +5,9 @@
   padding: clamp(40px, 6vw, 86px) 0;
 
   &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 24px 0;
     margin-bottom: clamp(32px, 4.6vw, 64px);
 
     &--centered {
@@ -22,10 +25,28 @@
     .section__nav {
       margin-bottom: clamp(32px, 6vw, 84px);
     }
+
+    @include media(tablet) {
+      padding-bottom: 0;
+    }
+  }
+
+  &--reviews {
+    .section__nav {
+      margin-bottom: clamp(32px, 4.4vw, 60px);
+    }
+  }
+
+  &--creamy,
+  &--white {
+    color: var(--color-red-800);
   }
 
   &--creamy {
-    color: var(--color-red-800);
     background-color: var(--color-cream-400);
+  }
+
+  &--white {
+    background-color: var(--color-white);
   }
 }

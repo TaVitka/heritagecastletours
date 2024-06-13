@@ -4,7 +4,7 @@
 .info {
   &__box {
     @include flex-h-center;
-    align-items: stretch;
+    align-items: flex-start;
     max-width: 1440px;
     width: 100%;
     margin-inline: auto;
@@ -36,6 +36,7 @@
     &--bottomed {
       position: relative;
       top: clamp(16px, 2.2vw, 32px);
+      margin-bottom: clamp(16px, 2.2vw, 32px);
     }
 
     &--btn {
@@ -46,8 +47,16 @@
   }
 
   @include media(desktop) {
+    &__box {
+      align-items: stretch;
+    }
+
     &__content {
       padding-inline: 32px;
+
+      &--bottomed {
+        margin-bottom: 0;
+      }
     }
   }
 
