@@ -68,3 +68,33 @@ body {
     background-color: var(--color-black-70);
   }
 }
+
+.article {
+  position: relative;
+  filter: brightness(1);
+  transition: filter 0.4s ease-in-out;
+
+  &__link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+
+  img {
+    filter: brightness(1);
+    border: 0 double transparent;
+    transition-property: filter, border;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+  }
+
+  &:hover {
+    filter: opacity(0.8);
+  }
+
+  &:hover img {
+    filter: brightness(0.7);
+    border: 10px double var(--color-white);
+  }
+}

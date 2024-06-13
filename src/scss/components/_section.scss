@@ -1,0 +1,20 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.section {
+  padding: clamp(40px, 6vw, 86px) 0;
+
+  &__nav {
+    margin-bottom: clamp(32px, 4.6vw, 64px);
+
+    &--centered {
+      text-align: center;
+    }
+  }
+
+  &--featured {
+    .section__nav {
+      margin-bottom: clamp(32px, 5.4vw, 76px);
+    }
+  }
+}

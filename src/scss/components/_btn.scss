@@ -34,4 +34,13 @@
   &--long {
     padding-inline: clamp(48px, 5.4vw, 75px);
   }
+
+  &--centered {
+    display: block;
+    margin-inline: auto;
+
+    @include media(mobile-l) {
+      width: 100%;
+    }
+  }
 }
