@@ -17,7 +17,7 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(72px, 10vw, 140px);
+  font-size: clamp(52px, 10vw, 140px);
   line-height: 1.2
 }
 
@@ -68,6 +68,11 @@ textarea {
       display: block;
     }
   }
+}
+
+.desc {
+  font-size: clamp(20px, 2vi, 23px);
+  font-weight: var(--fw-400);
 }
 
 .accent {
