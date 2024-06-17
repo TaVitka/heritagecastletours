@@ -1,0 +1,43 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.request {
+  &__form {
+    max-width: 598px;
+    width: 100%;
+    margin-inline: auto;
+
+    & > *:not(:last-child, :nth-last-child(2)) {
+      margin-bottom: 16px;
+    }
+
+    & > *:nth-last-child(2) {
+      margin-bottom: 24px;
+    }
+
+    label {
+      display: block;
+      width: 100%;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      background-color: var(--color-white)
+    }
+
+    input {
+      padding: 19px clamp(10px, 1.2vw, 16px);
+    }
+
+    textarea {
+      min-height: 156px;
+      padding: 16px clamp(10px, 1.2vw, 16px);
+    }
+
+    .btn {
+      width: 100%;
+      padding-block: 22px;
+    }
+  }
+}

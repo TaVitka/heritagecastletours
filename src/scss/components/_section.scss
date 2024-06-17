@@ -4,6 +4,11 @@
 .section {
   padding: clamp(40px, 6vw, 86px) 0;
 
+  &__inner {
+    position: relative;
+    z-index: 2;
+  }
+
   &__nav {
     display: flex;
     flex-direction: column;
@@ -34,6 +39,12 @@
   &--reviews {
     .section__nav {
       margin-bottom: clamp(32px, 4.4vw, 60px);
+    }
+  }
+
+  &--request {
+    .section__nav {
+      margin-bottom: 32px;
     }
   }
 
