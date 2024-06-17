@@ -82,8 +82,17 @@
     gap: 16px;
 
     @include media(tablet) {
-      flex-direction: column;
-      gap: 30px;
+      &:not(&--footer) {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+
+    @include media(mobile-m) {
+      &--footer {
+        flex-direction: column;
+        gap: 30px;
+      }
     }
   }
 }

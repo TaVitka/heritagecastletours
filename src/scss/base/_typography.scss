@@ -77,6 +77,7 @@ textarea {
   }
 
   @include media(mobile-m) {
+    text-align: center;
     br {
       display: block;
     }

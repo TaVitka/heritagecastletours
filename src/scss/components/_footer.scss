@@ -1,0 +1,73 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.footer {
+  &__main,
+  &__wrapper {
+    @include flex-all-sb;
+  }
+
+  &__main {
+    padding: clamp(32px, 3.8vw, 53px) 0;
+  }
+
+  &__content {
+    @include flex-h-center;
+    flex-direction: column;
+
+    & > *:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__link {
+    font-size: clamp(16px, 2vi, 20px);
+  }
+
+  .logo {
+    min-height: 29px;
+    filter: brightness(0) saturate(100%) invert(32%) sepia(44%) saturate(1995%) hue-rotate(335deg) brightness(106%) contrast(86%);
+  }
+
+  &__wrapper {
+    max-width: 1216px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 25px 0;
+    border-top: 1px solid var(--color-white-20);
+  }
+
+  &__items {
+    @include flex-all-sb;
+    gap: 32px clamp(16px, 3.4vw, 48px);
+
+    .copyright {
+      font-weight: var(--fw-700);
+    }
+  }
+
+  @include media(mobile-l) {
+    &__main,
+    &__wrapper {
+      justify-items: center;
+      gap: 30px;
+    }
+
+    &__main {
+      flex-direction: column;
+
+      * {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &__wrapper {
+      flex-direction: column-reverse;
+    }
+
+    &__content {
+      align-items: center;
+    }
+  }
+}
