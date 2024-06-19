@@ -85,6 +85,12 @@
       &:not(&--footer) {
         flex-direction: column;
         gap: 30px;
+        max-width: max-content;
+        margin-inline: auto;
+
+        .btn {
+          width: 100%;
+        }
       }
     }
 
@@ -92,6 +98,10 @@
       &--footer {
         flex-direction: column;
         gap: 30px;
+
+        .btn {
+          width: 100%;
+        }
       }
     }
   }
