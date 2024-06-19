@@ -3,6 +3,7 @@
 
 .hero {
   $root: &;
+  color: var(--color-white);
 
   &__inner {
     display: flex;
@@ -35,10 +36,26 @@
       width: 6px;
       background-image: url("../images/icons/decor-icon.svg");
     }
+
+    h1,
+    h2 {
+      text-transform: uppercase;
+    }
   }
 
   .desc {
     margin-bottom: clamp(32px, 3.4vw, 48px);
+  }
+
+  &--section,
+  &--single {
+    .hero__content {
+      padding-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
   }
 
   &--section {
@@ -51,11 +68,6 @@
     .hero__content {
       max-width: 570px;
       width: 100%;
-      padding-left: 0;
-
-      &::before {
-        display: none;
-      }
 
       h2 {
         margin-bottom: 32px;
@@ -77,6 +89,22 @@
   &--gallery {
     .desc {
       font-size: clamp(18px, 2vi, 23px);
+    }
+  }
+
+  &--single {
+    .hero__inner {
+      min-height: 544px;
+    }
+
+    .hero__content {
+      .btn {
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        font-size: clamp(46px, 6vw, 64px);
+      }
     }
   }
 
@@ -112,6 +140,13 @@
 
     &__content {
       padding-left: 20px;
+    }
+
+    &--single {
+      .hero__inner {
+        min-height: 450px;
+        background-position: center;
+      }
     }
   }
 }

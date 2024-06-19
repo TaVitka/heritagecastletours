@@ -1,0 +1,72 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.single {
+  font-size: clamp(18px, 2vi, 20px);
+  letter-spacing: 0.4px;
+
+  h2 {
+    margin-bottom: 24px;
+    font-size: clamp(26px, 3.2vw, 30px);
+    line-height: 1.33;
+    color: var(--color-red-700);
+  }
+
+  &__content {
+    &:not(:last-of-type) {
+      margin-bottom: clamp(32px, 3.4vw, 48px);
+    }
+  }
+
+  &__box {
+    &:not(:last-of-type) {
+      margin-bottom: 12px;
+    }
+
+    & > p {
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: clamp(16px, 2.2vw, 28px);
+    }
+
+    li {
+      display: list-item;
+      list-style: disc;
+    }
+  }
+
+  &__cards {
+    @include flex-all-sb;
+    gap: clamp(10px, 2.4vw, 30px);
+  }
+
+  &__card {
+    width: 100%;
+    padding: clamp(16px, 2.4vw, 30px) clamp(10px, 2.8vw, 40px);
+    text-align: center;
+    background-color: var(--color-cream-400);
+
+    span {
+      display: block;
+      margin-bottom: 16px;
+      font-size: clamp(16px, 2vi, 18px);
+      letter-spacing: 0;
+    }
+
+    p {
+      font-weight: var(--fw-600);
+      font-size: clamp(18px, 2vi, 21px);
+      line-height: 1.3;
+      color: var(--color-red-700);
+      text-transform: uppercase;
+    }
+  }
+
+  @include media(tablet) {
+    &__cards {
+      flex-direction: column;
+    }
+  }
+}

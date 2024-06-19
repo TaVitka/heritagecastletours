@@ -18,6 +18,11 @@
     &--centered {
       text-align: center;
     }
+
+    .text {
+      line-height: 1.5;
+      letter-spacing: 0.4px;
+    }
   }
 
   &--featured {
@@ -65,6 +70,16 @@
 
   &--white {
     background-color: var(--color-white);
+  }
+
+  &--single {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+
+    .section__nav {
+      margin-bottom: clamp(32px, 3.4vw, 48px);
+    }
   }
 
   @include media(tablet) {

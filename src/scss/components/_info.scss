@@ -75,6 +75,10 @@
   }
 
   &--accent {
+    .info__box {
+      align-items: flex-start;
+    }
+
     .info__image,
     .info__content {
       max-width: 50%;

@@ -7,6 +7,7 @@
   z-index: 10;
   padding: clamp(12px, 2vw, 26px) 0;
   width: 100%;
+  color: var(--color-white);
   background-color: transparent;
   transition-property: transform, padding, background-color;
   transition-duration: 0.15s;
