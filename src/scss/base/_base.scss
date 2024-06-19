@@ -23,6 +23,14 @@ body {
     background-color: var(--color-white);
   }
 
+  &--no-hero {
+    padding-top: var(--header-height);
+
+    .header {
+      background-color: var(--color-red-800);
+    }
+  }
+
   &__body {
     min-width: 320px;
     min-height: var(--vh);

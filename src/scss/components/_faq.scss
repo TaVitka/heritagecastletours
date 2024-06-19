@@ -1,0 +1,80 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.faq {
+  &__list {
+    max-width: 1216px;
+    width: 100%;
+    margin-inline: auto;
+    padding-left: 0;
+  }
+
+  &__item {
+    padding: 24px clamp(16px, 2.2vw, 32px) clamp(16px, 2.4vw, 34px) clamp(16px, 2.2vw, 32px);
+    list-style: none;
+    background-color: var(--color-cream-400);
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  details {
+    overflow: hidden;
+
+    &[open] {
+      summary {
+        padding-bottom: 12px;
+      }
+
+      summary::before {
+        rotate: 0deg;
+      }
+    }
+  }
+
+  summary {
+    position: relative;
+    padding-bottom: 0;
+    font-size: clamp(18px, 2vi, 20px);
+    line-height: 1.5;
+    font-weight: var(--fw-600);
+    color: var(--color-red-700);
+    cursor: pointer;
+
+    &::before {
+      @include cover-background;
+
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      overflow: hidden;
+      width: 26px;
+      height: 26px;
+      background-image: url("../images/icons/collapse-icon.svg");
+      transition: rotate 0.2s ease-in-out, filter 0.4s ease-in;
+      rotate: 180deg;
+      translate: 0 -50%;
+      filter: brightness(0) saturate(100%) invert(10%) sepia(31%) saturate(1039%) hue-rotate(314deg) brightness(97%) contrast(110%);
+      z-index: 2;
+    }
+
+    + div {
+      padding: 0;
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: var(--color-red-800);
+      }
+    }
+  }
+
+  @include media(desktop) {
+    summary {
+      padding-right: 32px;
+    }
+  }
+}
