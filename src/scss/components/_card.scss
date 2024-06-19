@@ -29,6 +29,20 @@
     }
   }
 
+  &__position {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: var(--fw-600);
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  &__decorated {
+    border-top: 1px solid var(--color-white);
+    padding-top: 16px;
+    font-size: 16px;
+  }
+
   &__pictures {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -86,6 +100,21 @@
   &--featured.card--btn {
     .card__items {
       margin-bottom: clamp(32px, 5.4vw, 76px);
+    }
+  }
+
+  &--colored {
+    .card__items {
+      gap: 32px clamp(20px, 3vw, 24px);
+    }
+
+    .card__item {
+      color: var(--color-white);
+      background-color: var(--color-red-800);
+    }
+
+    .card__content {
+      padding: clamp(16px, 3vw, 32px);
     }
   }
 

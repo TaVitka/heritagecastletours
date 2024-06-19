@@ -19,6 +19,10 @@ body {
   background-color: var(--color-red-800);
   font-optical-sizing: auto;
 
+  &--white {
+    background-color: var(--color-white);
+  }
+
   &__body {
     min-width: 320px;
     min-height: var(--vh);
