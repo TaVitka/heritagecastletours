@@ -4,7 +4,7 @@
 .info {
   &__box {
     @include flex-h-center;
-    align-items: flex-start;
+    align-items: stretch;
     max-width: 1440px;
     width: 100%;
     margin-inline: auto;
@@ -190,13 +190,15 @@
   }
 
   @include media(mobile-l) {
-    &__image {
-      aspect-ratio: auto;
-    }
-
     &__content {
       .btn {
         width: 100%;
+      }
+    }
+
+    &--services {
+      .info__image {
+        aspect-ratio: auto;
       }
     }
   }

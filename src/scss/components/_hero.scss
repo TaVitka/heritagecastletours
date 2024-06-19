@@ -3,7 +3,6 @@
 
 .hero {
   $root: &;
-  padding: 0;
 
   &__inner {
     display: flex;
@@ -42,6 +41,39 @@
     margin-bottom: clamp(32px, 3.4vw, 48px);
   }
 
+  &--section {
+    .hero__inner {
+      justify-content: flex-start;
+      min-height: auto;
+      padding: clamp(40px, 6vw, 86px) 0;
+    }
+
+    .hero__content {
+      max-width: 570px;
+      width: 100%;
+      padding-left: 0;
+
+      &::before {
+        display: none;
+      }
+
+      h2 {
+        margin-bottom: 32px;
+        line-height: 1.2;
+      }
+
+      .text {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &--reverse {
+    .hero__content {
+      margin-left: auto;
+    }
+  }
+
   @include media(tablet) {
     &__inner {
       min-height: 600px;
@@ -53,6 +85,16 @@
       &::before {
         height: calc(100% + 40px);
         background-size: contain;
+      }
+    }
+
+    &--section {
+      .hero__inner {
+        background-position: left;
+      }
+
+      .hero__content {
+        margin-inline: 0;
       }
     }
   }

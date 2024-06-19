@@ -43,6 +43,8 @@
   }
 
   &--request {
+    @include cover-background;
+
     .section__nav {
       margin-bottom: 32px;
     }
