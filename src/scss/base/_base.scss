@@ -21,6 +21,7 @@ body {
 
   &--white {
     background-color: var(--color-white);
+    color: var(--color-red-800);
   }
 
   &--no-hero {
@@ -28,6 +29,7 @@ body {
 
     .header {
       background-color: var(--color-red-800);
+      color: var(--color-white);
     }
   }
 

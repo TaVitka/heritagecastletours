@@ -1,0 +1,54 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.policy {
+  h1,
+  h2 {
+    line-height: 1.2;
+    color: var(--color-red-700);
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin-bottom: 36px;
+    font-size: clamp(28px, 5vw, 56px);
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+    font-size: clamp(26px, 3.2vw, 32px);
+  }
+
+  .policy__content:not(:last-child),
+  .policy__content > *:not(:last-child, h2) {
+    margin-bottom: clamp(16px, 3vw, 32px);
+  }
+
+  li:not([class]) {
+    padding-left: 32px;
+    position: relative;
+
+    &::before {
+      content: "\2714";
+      position: absolute;
+      left: 0;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+  }
+
+  a {
+    display: inline;
+    color: var(--color-red-400);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+  strong {
+    font-size: clamp(18px, 3vw, 22px);
+    font-weight: var(--fw-600);
+  }
+}
