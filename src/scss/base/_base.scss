@@ -51,6 +51,10 @@ body {
   &--large {
     max-width: var(--container-large);
   }
+
+  @include media(desktop-wide, min) {
+    max-width: var(--container-large);
+  }
 }
 
 .site-container {

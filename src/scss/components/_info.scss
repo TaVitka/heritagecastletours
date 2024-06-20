@@ -118,6 +118,22 @@
     }
   }
 
+  @include media(desktop-wide, min) {
+    &__box {
+      max-width: var(--container-large);
+    }
+
+    &__content {
+      padding-inline: clamp(32px, 8.8vw, 124px) 0;
+    }
+
+    &--reverse {
+      .info__content {
+        padding-inline: 0 clamp(32px, 8.8vw, 124px);
+      }
+    }
+  }
+
   @include media(desktop) {
     &__box {
       align-items: stretch;
